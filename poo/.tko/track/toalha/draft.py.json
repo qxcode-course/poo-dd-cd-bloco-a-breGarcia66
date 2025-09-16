@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-16_19-51-44",
+            "content": "@@ -1,41 +0,0 @@\n-print('MInha toalha %C3%A9 do roblox %5C'-%5C'');%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-09-16_19-55-31",
+            "content": "@@ -22,16 +22,20 @@\n  do \n-R\n+r\n oblox \n-:)\n+%5C'-%5C'\n ');\n+%0A\n",
+            "lines": "1"
+        },
+        {
+            "label": "2025-09-16_20-03-39",
+            "content": "@@ -1,17 +1,17 @@\n print('M\n-i\n+I\n nha toal\n",
+            "lines": "1"
+        },
+        {
+            "label": "2025-09-16_20-03-48",
+            "content": "@@ -34,223 +34,4 @@\n )');\n-%0A%0A#Criando toalha%0A%0Aclass Towel:%0A    def _init_ (self):%0A        self.color = 'red with white'%0A        self.size = 'M'%0A        self.witness = 0%0A%0Atoalha = Towel()%0A%0Aprint(f%22%7Btoalha.color%7D%5Cn%7Btoalha.size%7D%5Cn%7Btoalha.witness%7D%22)%0A\n",
+            "lines": "1"
+        },
+        {
+            "label": "2025-09-16_20-10-04",
+            "content": "@@ -193,24 +193,27 @@\n el()%0A%0Aprint(\n+f%22%7B\n toalha.color\n@@ -212,24 +212,20 @@\n ha.color\n-)%0Aprint(\n+%7D%5Cn%7B\n toalha.s\n@@ -231,16 +231,12 @@\n size\n-)%0Aprint(\n+%7D%5Cn%7B\n toal\n@@ -245,10 +245,12 @@\n .witness\n+%7D%22\n )%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2025-09-16_20-11-15",
+            "content": "@@ -106,17 +106,17 @@\n color = \n-%22\n+'\n red with\n@@ -121,17 +121,17 @@\n th white\n-%22\n+'\n %0A       \n@@ -147,11 +147,11 @@\n e = \n-%22M%22\n+'M'\n %0A   \n",
+            "lines": "15"
+        },
+        {
+            "label": "2025-09-16_20-11-58",
+            "content": "@@ -175,19 +175,20 @@\n  = 0%0A%0Ato\n-wel\n+alha\n  = Towel\n@@ -199,19 +199,20 @@\n print(to\n-wel\n+alha\n .color)%0A\n@@ -219,19 +219,20 @@\n print(to\n-wel\n+alha\n .size)%0Ap\n@@ -238,19 +238,20 @@\n print(to\n-wel\n+alha\n .witness\n",
+            "lines": "15"
+        },
+        {
+            "label": "2025-09-16_20-12-46",
+            "content": "@@ -29,16 +29,17 @@\n lox :)')\n+;\n %0A%0A#Crian\n@@ -74,16 +74,14 @@\n def \n-_\n _init_\n-_\n  (se\n",
+            "lines": "15"
+        },
+        {
+            "label": "2025-09-16_20-13-30",
+            "content": "@@ -87,46 +87,10 @@\n self\n-, color: str, size: str): #consturctor\n+):\n %0A   \n@@ -123,26 +123,16 @@\n h white%22\n- #atribute\n %0A       \n@@ -151,32 +151,8 @@\n  %22M%22\n-               #atribute\n %0A   \n@@ -176,312 +176,46 @@\n  = 0\n-              #atribute%0A%0A    def __str__ (self):%0A        return f%22Cor: %7Bself.color%7D%5Cn Tam:%7Bself.size%7D%5Cn Umi: %7Bself.witness%7D%22%0A%0A#reference%0Atowel = Towel(%22green%22, %22G%22) #object %0Atowel2 = Towel(%22Red%22, %22M%22)  #object%0AextraTowel = towel2%0AsuperExtraTowel = towel2%0A%0A%0A# print(towel.color)%0A# towel.color = %22white%22%0A# \n+%0A%0Atowel = Towel()%0A%0Aprint(towel.color)%0A\n prin\n@@ -232,10 +232,8 @@\n ze)%0A\n-# \n prin\n@@ -253,17 +253,4 @@\n ss)%0A\n-%0Aprint(towel)\n",
+            "lines": "15"
+        },
+        {
+            "label": "2025-09-16_20-22-15",
+            "content": "@@ -327,16 +327,17 @@\n color%7D%5Cn\n+ \n Tam:%7Bsel\n@@ -345,16 +345,17 @@\n .size%7D%5Cn\n+ \n Umi: %7Bse\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-09-16_20-22-28",
+            "content": "@@ -331,17 +331,16 @@\n r%7D%5CnTam:\n- \n %7Bself.si\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-09-16_20-22-41",
+            "content": "print('Minha toalha \u00e9 do Roblox :)')\n\n#Criando toalha\n\nclass Towel:\n    def __init__ (self, color: str, size: str): #consturctor\n        self.color = \"red with white\" #atribute\n        self.size = \"M\"               #atribute\n        self.witness = 0              #atribute\n\n    def __str__ (self):\n        return f\"Cor: {self.color}\\nTam: {self.size}\\nUmi: {self.witness}\"\n\n#reference\ntowel = Towel(\"green\", \"G\") #object \ntowel2 = Towel(\"Red\", \"M\")  #object\nextraTowel = towel2\nsuperExtraTowel = towel2\n\n\n# print(towel.color)\n# towel.color = \"white\"\n# print(towel.size)\n# print(towel.witness)\n\nprint(towel)",
+            "lines": "26"
+        }
+    ]
+}
