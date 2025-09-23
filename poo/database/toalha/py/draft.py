@@ -1,34 +1,73 @@
-print('Minha toalha é do Roblox :)')
-
-#Criando toalha
+# Configurando obejto Towel
 
 class Towel:
-    def __init__ (self, color: str, size: str): #consturctor
-        self.color = "red with white" #atribute
-        self.size = "M"               #atribute
-        self.witness = 0              #atribute
+    def __init__(self, size: str, color: str) -> None:
+        self.size: str = size.upper();
+        self.color: str = color;
+        self.wetness: int = 0;
+
+    def __str__(self) -> str:
+        return f"color: {self.color}, size: {self.size}, wetness: {self.wetness}";
 
     def getMaxWetness (self) -> int:
         if self.size == "P":
-            return 10
+            return 10;
         if self.size == "M":
-            return 20
+            return 20;
         if self.size == "G":
-            return 30
+            return 30;
+        return 0
 
-    def __str__ (self) -> str:
-        return f"Cor: {self.color}\nTam: {self.size}\nUmi: {self.witness}"
+    def dry (self, amount: int) -> None:
+        self.wetness += amount;
+        if self.wetness >= self.getMaxWetness():
+            print('A toalha está encharcada');
+            self.wetness = self.getMaxWetness();
 
-#reference
-towel = Towel("green", "G") #object 
-towel2 = Towel("Red", "M")  #object
-extraTowel = towel2
-superExtraTowel = towel2
+    def isDry (self) -> bool:
+        return self.wetness == 0;
 
+    def wringOut (self) -> None:
+        self.wetness = 0;
 
-# print(towel.color)
-# towel.color = "white"toalha
-# print(towel.size)
-# print(towel.witness)
+    def show (self):
+        print(self);
 
-print(towel)
+# Contruindo função Main()
+
+def main ():
+    towel: Towel = Towel("", "");
+
+    while True:
+        line = input();
+        args: list[str] = line.split(" ");
+        
+        if args[0] == "quit":
+            break;
+        
+        elif args[0] == "new":
+            print(f"${line}");
+            towel.color = args[1];
+            towel.size = args[2];
+
+        elif args[0] == "dry":
+            print(f"${line}");
+            towel.dry(int(args[1]));
+        
+        elif args[0] == "isDry":
+            print(f"${line}");
+            print(towel.isDry());
+        
+        elif args[0] == "show":
+            print(f"${line}");
+            towel.show();
+        
+        elif args[0] == "wringOut":
+            print(f"${line}");
+            towel.wringOut();
+
+        else:
+            print(f"${line}");
+            print(f"Error: \"{args[0]}\" não encontrado");
+
+main();

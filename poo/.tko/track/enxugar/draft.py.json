@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-23_12-00-38",
+            "content": "@@ -1120,11 +1120,6 @@\n );%0A%0A\n-main();\n+%0A%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-09-23_12-01-50",
+            "content": "@@ -1033,458 +1033,8 @@\n eak;\n-%0A    %0A    elif args%5B0%5D == %22criar%22:%0A      print(f%22$%7Bline%7D%22);%0A      towel.color = args%5B1%5D;%0A      towel.size  = args%5B2%5D;%0A%0A    elif args%5B0%5D == %22seca%22:%0A      print(f%22$%7Bline%7D%22);%0A      towel.isDry();%0A    %0A    elif args%5B0%5D == %22enxugar%22:%0A      print(f%22$%7Bline%7D%22);%0A      towel.dry(int(args%5B1%5D));%0A    %0A    elif args%5B0%5D == %22torcer%22:%0A      print(f%22$%7Bline%7D%22);%0A      towel.wringOut();%0A    %0A    elif  args%5B0%5D == %22mostrar%22:%0A      print(f%22$%7Bline%7D%22);%0A      towel.show();\n %0A%0A  \n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-09-23_12-07-18",
+            "content": "@@ -211,55 +211,8 @@\n lor%7D\n-, Tamanho: %7Bself.size%7D, Umidade: %7Bself.wetness%7D\n %22;%0A%0A\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-09-23_12-08-07",
+            "content": "@@ -1258,47 +1258,20 @@\n     \n-print(%22sim%22 if towel.isDry() else %22nao%22\n+towel.isDry(\n );%0A \n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-09-23_12-09-45",
+            "content": "@@ -576,17 +576,17 @@\n wetness \n-%3E\n+=\n = self.g\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-09-23_12-10-18",
+            "content": "@@ -363,9 +363,9 @@\n == %22\n-P\n+p\n %22:%0A \n@@ -404,17 +404,17 @@\n ize == %22\n-M\n+m\n %22:%0A     \n@@ -453,9 +453,9 @@\n == %22\n-G\n+g\n %22:%0A \n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-09-23_12-11-36",
+            "content": "@@ -549,9 +549,8 @@\n ess \n-+\n = am\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-09-23_12-13-29",
+            "content": "class Towel:\n  def __init__ (self, color: str, size: str) -> None:\n    self.color: str   = color;\n    self.size: str    = size;\n    self.wetness: int = 0;\n\n  def __str__(self) -> str:\n    return f\"Cor: {self.color}, Tamanho: {self.size}, Umidade: {self.wetness}\";\n\n  def show (self) -> None:\n    print(self);\n\n  def getMaxWetness (self) -> int:\n    if self.size == \"P\":\n      return 10;\n  \n    if self.size == \"M\":\n      return 20;\n  \n    if self.size == \"G\":\n      return 30\n    \n    return 0;\n\n  def dry (self, amount: int) -> None:\n    self.wetness += amount;\n\n    if self.wetness >= self.getMaxWetness():\n      print('toalha encharcada');\n      self.wetness = self.getMaxWetness();\n\n  def isDry (self) -> bool:\n    return self.wetness == 0;\n\n  def wringOut (self) -> None:\n    self.wetness = 0;\n\n# --------------------------------------------------------------------------------- #\n\ndef main () -> None:\n  towel: Towel = Towel(\"\", \"\");\n  \n  while True:\n    line: str = input();\n    args: list[str] = line.split(\" \");\n\n    if args[0] == \"end\":\n      print(f\"${line}\");\n      break;\n    \n    elif args[0] == \"criar\":\n      print(f\"${line}\");\n      towel.color = args[1];\n      towel.size  = args[2];\n\n    elif args[0] == \"seca\":\n      print(f\"${line}\");\n      print(\"sim\" if towel.isDry() else \"nao\");\n    \n    elif args[0] == \"enxugar\":\n      print(f\"${line}\");\n      towel.dry(int(args[1]));\n    \n    elif args[0] == \"torcer\":\n      print(f\"${line}\");\n      towel.wringOut();\n    \n    elif  args[0] == \"mostrar\":\n      print(f\"${line}\");\n      towel.show();\n\n    else:\n      print(f\"${line}\");\n      print(f\"Erro: \\\"{line}\\\" n\u00e3o encontrado\");\n\nmain();",
+            "lines": "76"
+        }
+    ]
+}
