@@ -29,3 +29,10 @@
 2025-09-23 12:12:01, EXEC, v:1, k:enxugar, mode:FREE
 2025-09-23 12:13:29, EXEC, v:1, k:enxugar, mode:FULL, rate:100, size:76
 2025-09-23 12:13:35, MOVE, v:1, k:enxugar, mode:BACK
+2025-09-23 20:33:39, MOVE, v:1, k:animal, mode:DOWN
+2025-09-23 21:04:32, MOVE, v:1, k:animal, mode:PICK
+2025-09-23 21:04:35, EXEC, v:1, k:animal, mode:FREE, size:51
+2025-09-23 21:04:52, EXEC, v:1, k:animal, mode:FREE, size:53
+2025-09-23 22:04:48, EXEC, v:1, k:animal, mode:FULL, rate:100, size:94
+2025-09-23 22:04:57, MOVE, v:1, k:animal, mode:BACK
+2025-09-23 22:07:08, SELF, v:1, k:animal, rate:100, iagen:s, other:s, alone:8, study:90
